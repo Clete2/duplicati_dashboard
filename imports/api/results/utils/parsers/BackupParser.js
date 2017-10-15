@@ -1,5 +1,8 @@
 import _ from 'lodash';
 
+const numberRegex = /^[0-9]+$/;
+const booleanRegex = /^false|true$/i;
+
 const backupParser = (message) => {
   console.info(`Got message: ${JSON.stringify(message)}`);
   let result = {};
@@ -44,7 +47,7 @@ const parseFirstLine = (firstLine) => { // Example: Duplicati Backup report for 
 
 const castProperly = (value: String) => {
   try {
-    if (_.isNumber(value) || _.isBoolean(value)) {
+    if (value.match(numberRegex) || value.match(booleanRegex)) {
       return JSON.parse(value.toLowerCase());
     }
 
