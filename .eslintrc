@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": "airbnb",
+  "rules": {
+    "max-len": [1, 120],
+    "global-require": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-boolean-value": "off",
+    "no-use-before-define": [1, { "variables": false } ]
+  }
+}
