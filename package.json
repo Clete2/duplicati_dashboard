@@ -8,6 +8,7 @@
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
     "meteor-node-stubs": "^0.2.11",
+    "moment": "^2.19.1",
     "react": "^16.0.0",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.0.0"

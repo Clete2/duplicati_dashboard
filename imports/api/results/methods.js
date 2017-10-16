@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Results } from './results';
-import parseResult from './utils/resultParser';
+import parseResult from './parser/resultParser';
 
 Meteor.method(
   'results', (data: String) => {

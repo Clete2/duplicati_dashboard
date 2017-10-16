@@ -1,4 +1,4 @@
-import backupParser from './parsers/BackupParser';
+import backupParser from './BackupParser';
 
 const resultTypeRegex = /MainOperation:\s(\w+)/i;
 

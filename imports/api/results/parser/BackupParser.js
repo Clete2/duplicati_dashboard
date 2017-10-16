@@ -1,7 +1,4 @@
-import _ from 'lodash';
-
-const numberRegex = /^[0-9]+$/;
-const booleanRegex = /^false|true$/i;
+import castProperly from './cast';
 
 const backupParser = (message) => {
   console.info(`Got message: ${JSON.stringify(message)}`);
@@ -43,20 +40,6 @@ const parseFirstLine = (firstLine) => { // Example: Duplicati Backup report for 
   const computerName = words.splice(forIndex + 1).join(' ');
 
   return { type, computerName };
-};
-
-const castProperly = (value: String) => {
-  try {
-    if (value.match(numberRegex) || value.match(booleanRegex)) {
-      return JSON.parse(value.toLowerCase());
-    }
-
-    return JSON.parse(value);
-  } catch (e) {
-    console.info('Could not parse String as object', e);
-  }
-
-  return value;
 };
 
 export default backupParser;
